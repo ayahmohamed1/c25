@@ -70,14 +70,14 @@ export default function App() {
   const [isEnvelopeOpened, setIsEnvelopeOpened] = useState(false);
   const [showMain, setShowMain] = useState(false);
 
-  // تم تعديل المقاسات والمسافات (left/right و width) للموبايل لتبتعد عن الأطراف المزخرفة
+  // تم استرجاع التنسيق الأصلي للصور مع إزاحتها قليلاً (11% - 13%) للداخل لتجنب الورد فقط
   const PHOTOS = [
-    { id: 1, src: '/images/photo3.jpg', classes: 'absolute top-[16%] left-[18%] sm:left-[8%] w-[36%] sm:w-[32%]', rotate: -8 },
-    { id: 2, src: '/images/photo4.jpg', classes: 'absolute top-[6%] right-[18%] sm:right-[6%] w-[35%] sm:w-[30%]', rotate: 11 },
-    { id: 3, src: '/images/photo5.jpg', classes: 'absolute top-[42%] left-[17%] sm:left-[7%] w-[38%] sm:w-[34%]', rotate: -5 },
-    { id: 4, src: '/images/photo6.jpg', classes: 'absolute top-[36%] right-[17%] sm:right-[8%] w-[37%] sm:w-[33%]', rotate: 9 },
-    { id: 5, src: '/images/photo7.jpg', classes: 'absolute top-[72%] left-[19%] sm:left-[9%] w-[36%] sm:w-[32%]', rotate: -10 },
-    { id: 6, src: '/images/photo8.jpg', classes: 'absolute top-[68%] right-[18%] sm:right-[8%] w-[35%] sm:w-[31%]', rotate: 7 },
+    { id: 1, src: '/images/photo3.jpg', classes: 'absolute top-[16%] left-[12%] sm:left-[8%] w-[42%] sm:w-[32%]', rotate: -8 },
+    { id: 2, src: '/images/photo4.jpg', classes: 'absolute top-[6%] right-[11%] sm:right-[6%] w-[40%] sm:w-[30%]', rotate: 11 },
+    { id: 3, src: '/images/photo5.jpg', classes: 'absolute top-[42%] left-[11%] sm:left-[7%] w-[43%] sm:w-[34%]', rotate: -5 },
+    { id: 4, src: '/images/photo6.jpg', classes: 'absolute top-[36%] right-[12%] sm:right-[8%] w-[42%] sm:w-[33%]', rotate: 9 },
+    { id: 5, src: '/images/photo7.jpg', classes: 'absolute top-[72%] left-[13%] sm:left-[9%] w-[42%] sm:w-[32%]', rotate: -10 },
+    { id: 6, src: '/images/photo8.jpg', classes: 'absolute top-[68%] right-[12%] sm:right-[8%] w-[41%] sm:w-[31%]', rotate: 7 },
   ];
 
   const handleRestart = () => {
@@ -247,7 +247,7 @@ export default function App() {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="absolute top-0 left-[20%] sm:left-[8%] font-serif text-[26px] sm:text-5xl uppercase leading-snug tracking-widest text-[#f3e3ce] drop-shadow-md z-20"
+            className="absolute top-0 left-[12%] sm:left-[8%] font-serif text-3xl sm:text-5xl uppercase leading-snug tracking-widest text-[#f3e3ce] drop-shadow-md z-20"
           >
             MY FAV PICS <br /> OF YOU
           </motion.h2>
