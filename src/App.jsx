@@ -199,7 +199,7 @@ export default function App() {
             className="w-full relative flex flex-col items-center justify-center text-center px-[22%] py-[25%] sm:px-[22%] sm:py-[22%]"
             style={{
               backgroundImage: "url('/images/lace paper.png')",
-              backgroundSize: '140% 114%',
+              backgroundSize: '140% 120%',
               backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat',
             }}
