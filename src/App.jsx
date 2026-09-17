@@ -70,13 +70,14 @@ export default function App() {
   const [isEnvelopeOpened, setIsEnvelopeOpened] = useState(false);
   const [showMain, setShowMain] = useState(false);
 
+  // تم تعديل المقاسات والمسافات (left/right و width) للموبايل لتبتعد عن الأطراف المزخرفة
   const PHOTOS = [
-    { id: 1, src: '/images/photo3.jpg', classes: 'absolute top-[16%] left-[4%] sm:left-[8%] w-[45%] sm:w-[32%]', rotate: -8 },
-    { id: 2, src: '/images/photo4.jpg', classes: 'absolute top-[6%] right-[3%] sm:right-[6%] w-[43%] sm:w-[30%]', rotate: 11 },
-    { id: 3, src: '/images/photo5.jpg', classes: 'absolute top-[42%] left-[3%] sm:left-[7%] w-[46%] sm:w-[34%]', rotate: -5 },
-    { id: 4, src: '/images/photo6.jpg', classes: 'absolute top-[36%] right-[4%] sm:right-[8%] w-[45%] sm:w-[33%]', rotate: 9 },
-    { id: 5, src: '/images/photo7.jpg', classes: 'absolute top-[72%] left-[5%] sm:left-[9%] w-[45%] sm:w-[32%]', rotate: -10 },
-    { id: 6, src: '/images/photo8.jpg', classes: 'absolute top-[68%] right-[4%] sm:right-[8%] w-[44%] sm:w-[31%]', rotate: 7 },
+    { id: 1, src: '/images/photo3.jpg', classes: 'absolute top-[16%] left-[18%] sm:left-[8%] w-[36%] sm:w-[32%]', rotate: -8 },
+    { id: 2, src: '/images/photo4.jpg', classes: 'absolute top-[6%] right-[18%] sm:right-[6%] w-[35%] sm:w-[30%]', rotate: 11 },
+    { id: 3, src: '/images/photo5.jpg', classes: 'absolute top-[42%] left-[17%] sm:left-[7%] w-[38%] sm:w-[34%]', rotate: -5 },
+    { id: 4, src: '/images/photo6.jpg', classes: 'absolute top-[36%] right-[17%] sm:right-[8%] w-[37%] sm:w-[33%]', rotate: 9 },
+    { id: 5, src: '/images/photo7.jpg', classes: 'absolute top-[72%] left-[19%] sm:left-[9%] w-[36%] sm:w-[32%]', rotate: -10 },
+    { id: 6, src: '/images/photo8.jpg', classes: 'absolute top-[68%] right-[18%] sm:right-[8%] w-[35%] sm:w-[31%]', rotate: 7 },
   ];
 
   const handleRestart = () => {
@@ -146,9 +147,8 @@ export default function App() {
         </h1>
         
         <p className="z-10 pb-8 font-serif text-sm uppercase tracking-[0.2em] text-[#f3e3ce] drop-shadow-sm">
-  Happy birthday, love
-</p>
-        
+          Happy birthday, love
+        </p>
 
         <div className="relative z-10 mt-10 h-64 w-[310px] sm:h-80 sm:w-[420px] flex items-end justify-center">
           <div className="absolute bottom-0 h-44 w-full bg-[#dcc6ad] rounded-md shadow-inner sm:h-56"></div>
@@ -171,7 +171,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* ================= SECTION 3: VIDEO & LETTER (WIDER WITHOUT SCROLL) ================= */}
+      {/* ================= SECTION 3: VIDEO & LETTER ================= */}
       <section className="relative flex min-h-screen flex-col items-center justify-start sm:justify-center py-20 px-4 overflow-hidden">
         <div 
           className="absolute left-0 top-0 h-full w-20 sm:w-36 pointer-events-none z-0 opacity-95"
@@ -189,17 +189,12 @@ export default function App() {
           />
         </div>
 
-        {/* 
-          الورقة أصبحت تمتد تلقائياً بحجم النص
-          - max-w-[1000px] يجعل الصورة عريضة جداً 
-          - px-[20%] تضمن عدم تلامس النص مع زخرفة الدانتيل يميناً ويساراً 
-        */}
         <div className="z-10 mt-16 sm:mt-24 relative w-[95%] sm:w-[90%] max-w-[1000px] mx-auto drop-shadow-2xl">
           <div 
             className="w-full relative flex flex-col items-center justify-center text-center px-[22%] py-[25%] sm:px-[22%] sm:py-[22%]"
             style={{
               backgroundImage: "url('/images/lace paper.png')",
-              backgroundSize: '140% 120%',
+              backgroundSize: '140% 123%',
               backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat',
             }}
@@ -252,7 +247,7 @@ export default function App() {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="absolute top-0 left-[8%] font-serif text-3xl sm:text-5xl uppercase leading-snug tracking-widest text-[#f3e3ce] drop-shadow-md z-20"
+            className="absolute top-0 left-[20%] sm:left-[8%] font-serif text-[26px] sm:text-5xl uppercase leading-snug tracking-widest text-[#f3e3ce] drop-shadow-md z-20"
           >
             MY FAV PICS <br /> OF YOU
           </motion.h2>
